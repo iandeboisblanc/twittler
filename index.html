@@ -16,6 +16,10 @@
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          var timeStamp = tweet.created_at;
+          var $timeStamp = $('<footer></footer>');
+          $timeStamp.text(timeStamp);
+          $timeStamp.appendTo($tweet);
           $tweet.appendTo($body);
           index -= 1;
         }
