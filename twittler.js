@@ -1,9 +1,16 @@
         $(document).ready(function(){
+          var page = 'home';
 
           refreshTweets();
-          $('#home').on('click', refreshTweets);
+          $('#home').on('click', function() {
+            page = 'home';
+            refreshTweets();
+          });
           $('button').on('click', refreshTweets);
-          $(document).on('click', '.user', accessUserPage);
+          $(document).on('click', '.user', function() {
+            page = $(this).text().slice(1);
+            accessUserPage(page);
+          });
 
         });
 
@@ -30,9 +37,9 @@
           currentIndex = streams.home.length;
         }
 
-        function accessUserPage(){
+        function accessUserPage(user){
           $('main').text('');
-          var username = $(this).text().slice(1);
+          var username = user;
           for(var index = 0; index < streams.users[username].length; index++) {
             var $tweet = createTweetHTML(streams.users[username][index]);
             $tweet.prependTo($('main'));
