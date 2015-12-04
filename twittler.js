@@ -1,6 +1,7 @@
         $(document).ready(function(){
 
           refreshTweets();
+          $('#home').on('click', refreshTweets);
           $('button').on('click', refreshTweets);
           $(document).on('click', '.user', accessUserPage);
 
