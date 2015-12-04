@@ -1,5 +1,5 @@
-main {
-    background-color: cyan;
+body {
+    background-color: hsl(144, 43%, 83%);
 }
 
 #home {
@@ -8,13 +8,16 @@ main {
     text-decoration: none;
     color: hsl(153, 69%, 39%);
     margin-right: 10px;
+    font-size: 20px;
 }
 
 #home:hover {
-    color: hsl(153, 81%, 69%);
+    color: hsl(153, 60%, 69%);
 }
 
 .tweet {
+    font-family: 'Arial';
+    font-size: 15px;
     background-color: white;
     border-style: solid;
     border-radius: 8px;
