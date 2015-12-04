@@ -29,7 +29,7 @@ body {
     font-size: 10px;
 }
 
-#icon {
+#refresh {
     position: relative;
     background-image: url('refresh-icon.png');
     padding-left: 20px;
@@ -37,6 +37,6 @@ body {
     bottom: 2px;
 }
 
-#icon:hover {
+#refresh:hover {
     background-image: url('refresh-icon-hover.png');
 }
