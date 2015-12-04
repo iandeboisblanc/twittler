@@ -24,6 +24,18 @@ main {
     color: hsl(153, 60%, 69%);
 }
 
+#refresh {
+    position: relative;
+    background-image: url('images/refresh-icon.png');
+    padding-left: 20px;
+    padding-bottom: 2px;
+    bottom: 3px;
+}
+
+#refresh:hover {
+    background-image: url('images/refresh-icon-hover.png');
+}
+
 .tweet {
     font-family: 'Arial';
     font-size: 15px;
@@ -35,18 +47,17 @@ main {
     margin: 3px;
 }
 
+.user {
+    font-weight:bold;
+    font-size: 13px;
+    text-decoration: none;
+    color: hsl(208, 96%, 48%);
+}
+
+.user:hover {
+    color: hsl(208, 96%, 72%);
+}
+
 .timeStamp {
     font-size: 10px;
-}
-
-#refresh {
-    position: relative;
-    background-image: url('images/refresh-icon.png');
-    padding-left: 20px;
-    padding-bottom: 2px;
-    bottom: 3px;
-}
-
-#refresh:hover {
-    background-image: url('images/refresh-icon-hover.png');
 }
