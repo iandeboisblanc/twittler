@@ -2,6 +2,11 @@ body {
     background-color: hsl(144, 43%, 83%);
 }
 
+header {
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
 #home {
     font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
     font-weight: bold;
@@ -21,6 +26,7 @@ body {
     background-color: white;
     border-style: solid;
     border-radius: 8px;
+    border-color: hsl(153, 69%, 25%);
     padding: 5px;
     margin: 3px;
 }
@@ -34,7 +40,7 @@ body {
     background-image: url('refresh-icon.png');
     padding-left: 20px;
     padding-bottom: 2px;
-    bottom: 2px;
+    bottom: 3px;
 }
 
 #refresh:hover {
