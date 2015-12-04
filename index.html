@@ -11,20 +11,18 @@
     <main>
       <script>
 
-        $(document).ready(function(){
-          var $main = $('main');
-          var currentIndex = 0;
+        //Global variables:
+        var currentIndex = 0;
+        var $main = $('main');
 
-          var index = streams.home.length - 1;
-          while(index >= 0){
-            var $tweet = createTweetHTML(streams.home[index]);
-            // Append tweet to body:
-            $tweet.appendTo($main);
-            index -= 1;
-          }
+        //Active Code:
+        $(document).ready(function(){
+
+          refreshTweets();
 
         });
 
+        //Functions:
         function createTweetHTML(tweet){
           var $tweet = $('<div class="tweet"></div>');
           $tweet.text('@' + tweet.user + ': ' + tweet.message);
