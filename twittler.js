@@ -2,7 +2,7 @@
 
           refreshTweets();
           $('button').on('click', refreshTweets);
-          $('.user').on('click', accessUserPage);
+          $(document).on('click', '.user', accessUserPage);
 
         });
 
@@ -30,10 +30,10 @@
         }
 
         function accessUserPage(){
-            $('main').text('');
-            var username = $(this).text().slice(1);
-            for(var index = 0; index < streams.users[username].length; index++) {
-              var $tweet = createTweetHTML(streams.users[username][index]);
-              $tweet.prependTo($('main'));
-            }
+          $('main').text('');
+          var username = $(this).text().slice(1);
+          for(var index = 0; index < streams.users[username].length; index++) {
+            var $tweet = createTweetHTML(streams.users[username][index]);
+            $tweet.prependTo($('main'));
           }
+        }
