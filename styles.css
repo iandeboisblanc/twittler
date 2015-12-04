@@ -1,7 +1,15 @@
 main {
-    background-color: yellow;
+    background-color: cyan;
 }
 
 .tweet {
-    background-color: #66ffff;
+    background-color: white;
+    border-style: solid;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 3px;
+}
+
+.timeStamp {
+    font-size: 10px;
 }

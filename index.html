@@ -34,7 +34,7 @@
           var $timeStamp = $('<footer class="timeStamp"></footer>');
           $timeStamp.text(timeStamp);
           $timeStamp.appendTo($tweet);
-          var $user = $('<a href="tweet" class="user">@' + tweet.user + '</a>');
+          var $user = $('<a href="#" class="user">@' + tweet.user + '</a>');
           $user.prependTo($tweet);
           return $tweet;
         }
