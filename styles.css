@@ -28,3 +28,15 @@ body {
 .timeStamp {
     font-size: 10px;
 }
+
+#icon {
+    position: relative;
+    background-image: url('refresh-icon.png');
+    padding-left: 20px;
+    padding-bottom: 2px;
+    bottom: 2px;
+}
+
+#icon:hover {
+    background-image: url('refresh-icon-hover.png');
+}
