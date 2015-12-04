@@ -1,5 +1,6 @@
+        var page = 'home';
         $(document).ready(function(){
-          var page = 'home';
+          
 
           refreshTweets();
           $('#home').on('click', function() {
@@ -29,13 +30,20 @@
         }
 
         function refreshTweets(){
-          $('main').text('');
-          for(var index = 0; index < streams.home.length; index++) {
-            var $tweet = createTweetHTML(streams.home[index]);
-            $tweet.prependTo($('main'));
+          var tweetStream;
+          $('main').text('');          
+          if(page === 'home') {
+            tweetStream = streams.home;
+            }
+          else {
+            tweetStream = streams.users[page];
           }
-          currentIndex = streams.home.length;
+          for(var index = 0; index < tweetStream.length; index++) {
+            var $tweet = createTweetHTML(tweetStream[index]);
+            $tweet.prependTo($('main'));  
+          }
         }
+
 
         function accessUserPage(user){
           $('main').text('');
