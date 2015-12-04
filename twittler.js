@@ -26,7 +26,10 @@ function createTweetHTML(tweet){
   // Create timeStamp element and appends to tweet:
   var timeStamp = tweet.created_at;
   var $timeStamp = $('<footer class="timeStamp"></footer>');
-  $timeStamp.text(jQuery.timeago(timeStamp));
+  // Create time element used <abbr> tag to work with timeago plugin:
+  var $time = $('<abbr class="timeago">time</abbr>');
+  $time.attr('title', new Date().toISOString());
+  $timeStamp.append($time);
   $timeStamp.appendTo($tweet);
   // Create user element and prepend to tweet:
   var $user = $('<a href="#" class="user">@' + tweet.user + '</a>');
@@ -49,6 +52,7 @@ function refreshTweets(){
     $tweet.prependTo($('main'));  
   }
   $('#refreshTracker').find($('abbr')).attr('title', new Date().toISOString());
+  // Run timeago function so all timeStamps update automatically:
   jQuery("abbr.timeago").timeago();
 }
 
