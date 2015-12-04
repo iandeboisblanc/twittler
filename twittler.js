@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   refreshTweets();
 
-  $('button').on('click', refreshTweets);
+  $('#refresh').on('click', refreshTweets);
   $('#home').on('click', function() {
     page = 'home';
     refreshTweets();
