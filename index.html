@@ -7,7 +7,6 @@
   <body>
     <button type='button' id='refresh'>Refresh Tweets</button>
     <script>
-
       $(document).ready(function(){
         var $body = $('body');
 
@@ -25,6 +24,20 @@
           $timeStamp.appendTo($tweet);
           $tweet.appendTo($body);
           index -= 1;
+        }
+        function refreshTweets(){
+          for(var index = currentIndex; i < streams.home.length; i++){
+            var tweet = streams.home[index];
+            var $tweet = $('<div class="tweet"></div>');
+            $tweet.text('@' + tweet.user + ': ' + tweet.message);
+            // Create timeStamp element:
+            var timeStamp = tweet.created_at;
+            var $timeStamp = $('<footer class="timeStamp"></footer>');
+            $timeStamp.text(timeStamp);
+            // Append tweet/timeStamp to body:
+            $timeStamp.appendTo($tweet);
+            $tweet.appendTo($body);
+          }
         }
 
       });
