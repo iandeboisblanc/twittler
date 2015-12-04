@@ -13,6 +13,7 @@
 
         $(document).ready(function(){
           var $main = $('main');
+          var currentIndex = 0;
 
           var index = streams.home.length - 1;
           while(index >= 0){
@@ -35,6 +36,13 @@
           return $tweet;
         }
 
+        function refreshTweets(){
+          for(var index = currentIndex; index < streams.home.length; index++) {
+            var $tweet = createTweetHTML(streams.home[index]);
+            $tweet.prependTo($main);
+          }
+          currentIndex = streams.home.length;
+        }
 
       </script>
     </main>
