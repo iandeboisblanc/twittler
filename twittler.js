@@ -10,7 +10,7 @@
           $('button').on('click', refreshTweets);
           $(document).on('click', '.user', function() {
             page = $(this).text().slice(1);
-            accessUserPage(page);
+            refreshTweets();
           });
 
         });
@@ -41,15 +41,5 @@
           for(var index = 0; index < tweetStream.length; index++) {
             var $tweet = createTweetHTML(tweetStream[index]);
             $tweet.prependTo($('main'));  
-          }
-        }
-
-
-        function accessUserPage(user){
-          $('main').text('');
-          var username = user;
-          for(var index = 0; index < streams.users[username].length; index++) {
-            var $tweet = createTweetHTML(streams.users[username][index]);
-            $tweet.prependTo($('main'));
           }
         }
