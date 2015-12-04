@@ -22,6 +22,7 @@
 
           refreshTweets();
           $('button').on('click', refreshTweets);
+          $('.user').on('click', accessUserPage);
 
         });
 
@@ -46,6 +47,8 @@
           }
           currentIndex = streams.home.length;
         }
+
+        function accessUserPage(){};
 
       </script>
     </main>
