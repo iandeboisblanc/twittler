@@ -2,6 +2,18 @@ main {
     background-color: cyan;
 }
 
+#home {
+    font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(153, 69%, 39%);
+    margin-right: 10px;
+}
+
+#home:hover {
+    color: hsl(153, 81%, 69%);
+}
+
 .tweet {
     background-color: white;
     border-style: solid;
