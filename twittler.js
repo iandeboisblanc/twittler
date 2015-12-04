@@ -26,7 +26,7 @@ function createTweetHTML(tweet){
   // Create timeStamp element and appends to tweet:
   var timeStamp = tweet.created_at;
   var $timeStamp = $('<footer class="timeStamp"></footer>');
-  $timeStamp.text(timeStamp);
+  $timeStamp.text(jQuery.timeago(timeStamp));
   $timeStamp.appendTo($tweet);
   // Create user element and prepend to tweet:
   var $user = $('<a href="#" class="user">@' + tweet.user + '</a>');
