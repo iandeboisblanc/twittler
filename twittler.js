@@ -48,5 +48,6 @@ function refreshTweets(){
     var $tweet = createTweetHTML(tweetStream[index]);
     $tweet.prependTo($('main'));  
   }
+  $('#refreshTracker').text('Last refreshed ' + jQuery.timeago(new Date()));
 }
 
