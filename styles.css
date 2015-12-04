@@ -11,7 +11,7 @@ main {
     max-width: 600px;
 }
 
-#home {
+#home, #refreshTracker {
     font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
     font-weight: bold;
     text-decoration: none;
@@ -34,6 +34,11 @@ main {
 
 #refresh:hover {
     background-image: url('images/refresh-icon-hover.png');
+}
+
+#refreshTracker {
+    font-size: 10px;
+    padding-left: 10px;
 }
 
 .tweet {
