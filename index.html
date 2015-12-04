@@ -28,14 +28,14 @@
         //Functions:
         function createTweetHTML(tweet){
           var $tweet = $('<div class="tweet"></div>');
-          //var $user = $('<a href="tweet">@' + tweet.user + '</a>');
-          //$user.prependTo($tweet);
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $tweet.text(': ' + tweet.message);
           // Create timeStamp element:
           var timeStamp = tweet.created_at;
           var $timeStamp = $('<footer class="timeStamp"></footer>');
           $timeStamp.text(timeStamp);
           $timeStamp.appendTo($tweet);
+          var $user = $('<a href="tweet" class="user">@' + tweet.user + '</a>');
+          $user.prependTo($tweet);
           return $tweet;
         }
 
