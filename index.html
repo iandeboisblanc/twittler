@@ -14,7 +14,6 @@
       <script>
 
         //Global variables:
-        var currentIndex = 0;
         var $main = $('main');
 
         //Active Code:
@@ -41,7 +40,8 @@
         }
 
         function refreshTweets(){
-          for(var index = currentIndex; index < streams.home.length; index++) {
+          $main.text('');
+          for(var index = 0; index < streams.home.length; index++) {
             var $tweet = createTweetHTML(streams.home[index]);
             $tweet.prependTo($main);
           }
@@ -49,10 +49,9 @@
         }
 
         function accessUserPage(){
-            currentIndex = 0;
             $main.text('');
             var username = $(this).text().slice(1);
-            for(var index = currentIndex; index < streams.users[username].length; index++) {
+            for(var index = 0; index < streams.users[username].length; index++) {
               var $tweet = createTweetHTML(streams.users[username][index]);
               $tweet.prependTo($main);
             }
