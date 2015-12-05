@@ -28,7 +28,7 @@ function createTweetHTML(tweet){
   var $timeStamp = $('<footer class="timeStamp"></footer>');
   // Create time element used <abbr> tag to work with timeago plugin:
   var $time = $('<abbr class="timeago">time</abbr>');
-  $time.attr('title', new Date().toISOString());
+  $time.attr('title', timeStamp.toISOString());
   $timeStamp.append($time);
   $timeStamp.appendTo($tweet);
   // Create user element and prepend to tweet:
