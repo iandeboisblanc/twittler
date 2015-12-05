@@ -52,6 +52,8 @@ function refreshTweets(){
     $tweet.prependTo($('main'));  
   }
   $('#refreshTracker').find($('abbr')).attr('title', new Date().toISOString());
+  // Update that there is a new timeStamp:
+  $('#refreshTracker').find($('abbr')).timeago('updateFromDOM');
   // Run timeago function so all timeStamps update automatically:
   jQuery("abbr.timeago").timeago();
 }
